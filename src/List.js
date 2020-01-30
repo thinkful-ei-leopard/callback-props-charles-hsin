@@ -14,9 +14,16 @@ export default function List(props) {
             key={card.id}
             title={card.title}
             content={card.content}
+            onDeleteItem={props.onDeleteItem}
+            
+            id={card.id}
+           
           />
+          
         )}
-        <button
+         
+        
+        <button onClick={() => props.onAddItem(props.id)}
           type='button'
           className='List-add-button'
         >
